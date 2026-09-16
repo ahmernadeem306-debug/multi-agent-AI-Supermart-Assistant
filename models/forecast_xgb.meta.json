@@ -1,0 +1,52 @@
+{
+  "trained_at": "2026-09-09T13:17:24.882654",
+  "feature_columns": [
+    "sku",
+    "aisle",
+    "lag_1",
+    "lag_7",
+    "lag_14",
+    "lag_28",
+    "rmean_7",
+    "rmean_14",
+    "rmean_28",
+    "rstd_7",
+    "rstd_14",
+    "rstd_28",
+    "day_of_week",
+    "week_of_year",
+    "month",
+    "is_weekend",
+    "days_since_stockout",
+    "promo_flag"
+  ],
+  "categorical_columns": [
+    "sku",
+    "aisle"
+  ],
+  "valid_days": 28,
+  "data_range": {
+    "start": "2024-09-08",
+    "end": "2026-09-08"
+  },
+  "n_train_rows": 40500,
+  "n_valid_rows": 1680,
+  "residual_std": 5.7879,
+  "metrics": {
+    "xgboost": {
+      "mae": 3.6971,
+      "rmse": 5.7907,
+      "mape": 13.87,
+      "wape": 13.35,
+      "n": 1680
+    },
+    "seasonal_naive": {
+      "mae": 3.8304,
+      "rmse": 5.9774,
+      "mape": 14.53,
+      "wape": 13.83,
+      "n": 1680
+    }
+  },
+  "verdict": "XGBoost beats the baseline (MAE 3.6971 vs 3.8304, 3.5% better)"
+}

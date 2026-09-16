@@ -1,0 +1,29 @@
+{
+  "generated_at": "2026-09-09T13:15:31.277222",
+  "anomalies": [
+    {
+      "id": "A",
+      "sku": "SKU-1035",
+      "type": "stockout_late_delivery",
+      "description": "SKU-1035 is a high-velocity SKU that stocks out because a purchase order was delivered 9 days late."
+    },
+    {
+      "id": "B",
+      "sku": "SKU-1002",
+      "type": "shrinkage_theft_spike",
+      "description": "SKU-1002 has normal purchase orders but an abnormal spike in theft-reason shrinkage events, producing a shelf/backroom discrepancy."
+    },
+    {
+      "id": "C",
+      "sku": "SKU-1001",
+      "type": "expiry_writeoff_stockout",
+      "description": "SKU-1001 is a perishable SKU with a large batch expiring soon, causing an expiry-driven write-off and a subsequent stockout."
+    },
+    {
+      "id": "D",
+      "sku": "SKU-1003",
+      "type": "demand_shift_stale_reorder_point",
+      "description": "SKU-1003 sales suddenly doubled (promotion-like demand shift) in the last 60 days while its reorder_point stayed at the old level."
+    }
+  ]
+}
