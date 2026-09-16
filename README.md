@@ -176,7 +176,7 @@ BizAgent/
 ├── ui/
 │   ├── components/            # common (API client + sidebar), charts, report_view
 │   ├── pages/                  # 1_Dashboard … 6_Agent_Logs
-│   └── streamlit_app.py        # Landing page + shared sidebar
+│   └── Overview.py        # Landing page + shared sidebar
 ├── Dockerfile, docker-compose.yml, .dockerignore
 ├── requirements.txt (pinned), .env.example, .gitignore
 ├── LICENSE (MIT)
@@ -329,7 +329,7 @@ python scripts/run_mcp_server.py
 uvicorn app.api.main:app --reload --port 8000
 
 # Terminal 3 — Streamlit dashboard
-streamlit run ui/streamlit_app.py
+streamlit run ui/Overview.py
 ```
 
 Open `http://localhost:8501`. The sidebar shows API health, the active tool provider and forecast
@@ -564,10 +564,5 @@ Honest, not hidden — several are deliberate scope decisions documented in
 - Role-based authentication.
 - A smaller Docker image (split the local-embedding extras into an optional stage).
 
-## Credits and licence
 
-Built by **Soojal Kumar** and **Ahmer Nadeem** as a capstone project, following
-[`BIZAGENT_BUILD_PLAN.md`](BIZAGENT_BUILD_PLAN.md) as the implementation source of truth against the
-*BizAgent Capstone Project Proposal*.
 
-Licensed under the [MIT License](LICENSE).
